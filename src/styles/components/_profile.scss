@@ -1,0 +1,85 @@
+/* ============================================
+================= PROFILE =================
+============================================ */
+.profile {
+  width: 100%;
+  @include increase-element-size(95%, $container-width-sizes, width);
+  padding: px-rem(10) px-rem(5);
+  margin: 0 auto;
+}
+.profile__heading {
+  text-align: center;
+  margin: px-rem(25) 0;
+}
+.profile__info {
+  width: 100%;
+  @include v-flex(center, flex-start);
+}
+.profile__fieldset {
+  width: 100%;
+  color: $mild-violet;
+  background-color: $white;
+  margin: px-rem(25) 0;
+  border: 2px solid $mild-violet;
+}
+.profile__legend {
+  color: $mild-violet;
+  background-color: $primary-fg-color;
+  padding: px-rem(8);
+}
+.profile__text-box {
+  @include h-flex(space-between, center);
+  padding: px-rem(10) px-rem(5);
+  border-bottom: 3px solid $mild-violet;
+}
+.profile__text {
+  margin: 0;
+  color: $black;
+}
+.profile__btn-edit {
+  @include strip-btn-defaults;
+  color: $mild-violet;
+  cursor: pointer;
+}
+[contenteditable="false"] {
+  transition: all 0.3s ease-in;
+}
+
+[contenteditable="true"] {
+  background-color: lighten($secondary-fg-color, 15%);
+  border: 1px solid rgba($primary-fg-color, 0.5);
+  transition: all 0.3s ease-in;
+  padding: px-rem(5);
+
+  &:focus {
+    background-color: transparent;
+    border: 1px solid $primary-fg-color;
+    outline: none;
+  }
+}
+.profile__checkbox {
+  margin: px-rem(10);
+}
+/* ============================================
+================= MEDIA QUERIES =================
+============================================ */
+@media screen and (min-width: px-rem(480)) {
+  .profile {
+    padding: px-rem(10) px-rem(10);
+  }
+}
+@media screen and (min-width: px-rem(768)) {
+  .profile {
+    padding: px-rem(15) px-rem(20);
+  }
+}
+@media screen and (min-width: px-rem(1024)) {
+  .profile {
+    padding: px-rem(20) px-rem(30);
+  }
+}
+@media screen and (min-width: px-rem(1400)) {
+  .profile {
+    padding: px-rem(20) px-rem(40);
+  }
+}

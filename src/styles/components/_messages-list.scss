@@ -1,0 +1,34 @@
+/* ===================================== 
+================= MESSAGES LIST ===========
+===================================== */
+.messages-list {
+  width: 100%;
+  min-height: 75vh;
+  padding: px-rem(10) px-rem(5);
+}
+.messages-list__ul {
+  @include ulStyle;
+}
+/* ============================================
+================= MEDIA QUERIES =================
+============================================ */
+@media screen and (min-width: px-rem(480)) {
+  .messages-list {
+    padding: px-rem(10) px-rem(10);
+  }
+}
+@media screen and (min-width: px-rem(768)) {
+  .messages-list {
+    padding: px-rem(15) px-rem(20);
+  }
+}
+@media screen and (min-width: px-rem(1024)) {
+  .messages-list {
+    padding: px-rem(20) px-rem(30);
+  }
+}
+@media screen and (min-width: px-rem(1400)) {
+  .messages-list {
+    padding: px-rem(20) px-rem(40);
+  }
+}

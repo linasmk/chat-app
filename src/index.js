@@ -1,15 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+/* ========= App Dependencies ============= */
+import React from "react";
+import ReactDOM from "react-dom";
+/* =========== Redux ================== */
+import store from "./store/configureStore";
+import { Provider } from "react-redux";
+/* =========== Router ================== */
+import AppRouter from "./routers/AppRouter";
 
-ReactDOM.render(
+/* ========== Styles and Components ========== */
+import "normalize.css/normalize.css";
+import "./styles/styles.scss";
+/* ========== Perormance ========== */
+import reportWebVitals from "./reportWebVitals";
+import { addUser } from "./actions/action-creators";
+/* ========== Code ========== */
+
+// store.dispatch(addUser("Me"));
+const root = document.getElementById("root");
+const jsx = (
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <Provider store={store}>
+      <AppRouter />
+    </Provider>
+  </React.StrictMode>
 );
+
+ReactDOM.render(jsx, root);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

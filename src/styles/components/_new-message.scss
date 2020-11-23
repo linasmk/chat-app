@@ -1,0 +1,38 @@
+/* ===================================== 
+================= NEW MESSAGE ===========
+===================================== */
+.new-message {
+  width: 100%;
+  height: auto;
+  border-top: 1px solid $bg-border;
+  @include h-flex(center, center);
+  padding: px-rem(35) 0;
+}
+.new-message__textarea--wrapper {
+  width: 90%;
+  position: relative;
+  @include h-flex(center, center);
+}
+.new-message__textarea {
+  width: 100%;
+  border: none;
+  border-radius: px-rem(20);
+  padding: px-rem(10) px-rem(15);
+  resize: none;
+  &:focus {
+    outline: none;
+  }
+}
+.new-message__send-btn {
+  position: absolute;
+  right: px-rem(15);
+  color: $slate-grey;
+  @include increase-element-size(px-rem(18), $header-icon-sizes, width);
+  @include increase-element-size(px-rem(18), $header-icon-sizes, height);
+}
+
+.main__sidebar--open,
+.main__sidebar--close {
+  background-color: transparent;
+  color: $white;
+}

@@ -1,0 +1,76 @@
+/* ====================================
+================= SIDEBAR ==============
+======================================= */
+
+.sidebar {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: px-rem(10);
+  border-right: 1px solid $bg-border;
+  transform: translateX(-100%);
+  background-color: rgba($primary-fg-color, 0.95);
+  transition: transform 0.2s ease-in-out;
+  @include v-flex(space-between, center);
+  @include increase-element-size(65%, $sidebar-width-sizes, width);
+  z-index: 5;
+}
+.sidebar--open {
+  @extend .sidebar;
+  transform: translateX(0);
+}
+.conversations {
+  width: 100%;
+  margin-top: 5vh;
+  @include v-flex(center, center);
+}
+.conversations__heading {
+  color: $secondary-heading-color;
+  text-align: center;
+  margin: px-rem(15) 0;
+}
+.conversations__ul {
+  width: 80%;
+  @include ulStyle;
+  margin: 0 auto;
+  color: $white;
+}
+.conversation__item {
+  @include increase-element-size(
+    px-rem(5),
+    $box-elements-padding-sizes,
+    padding
+  );
+  text-decoration: none;
+  color: $white;
+}
+/* ================ Create Conversation =================== */
+.create-conversation {
+  width: 100%;
+  margin-bottom: 5vh;
+}
+.create-conversation__form {
+  width: 80%;
+  margin: 0 auto;
+}
+.create-conversation__input {
+  width: 100%;
+  border: none;
+  margin: px-rem(15) 0;
+  padding: px-rem(10) px-rem(15);
+  &:focus {
+    outline: none;
+  }
+}
+.create-conversation__btn {
+  width: 100%;
+  @include strip-btn-defaults;
+  color: $white;
+  background-color: $btn-bg-color;
+  box-shadow: 5px 5px 5px $black;
+  padding: px-rem(5);
+  &:focus {
+    box-shadow: 2px 2px 2px $black;
+  }
+}

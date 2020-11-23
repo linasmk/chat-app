@@ -1,0 +1,74 @@
+/* ============================================
+================= HEADER =================
+============================================ */
+.header {
+  background-color: $primary-fg-color;
+  @include h-flex(center, center);
+  position: relative;
+  width: 100%;
+  height: auto;
+  z-index: 1000;
+}
+
+.header__inner-wrapper {
+  background-color: $primary-fg-color;
+  @include increase-element-size(95%, $container-width-sizes, width);
+  margin: 0 auto;
+  @include h-flex(space-between, center);
+  padding: 1vh 0;
+}
+.header__title {
+  color: $title-color;
+  word-wrap: break-word;
+  text-align: left;
+  padding-left: px-rem(10);
+  @include increase-element-size(px-rem(24), $title-font-sizes, font-size);
+}
+.header__nav-ul {
+  width: 100%;
+  @include ulStyle;
+  @include h-flex(center, center);
+}
+.header__navlink {
+  text-decoration: none;
+  color: rgba($menu-icons-color, 0.6);
+  @include noHighlightAndSelect;
+  @include h-flex(center, center);
+  transition: color 0.2s ease-in;
+  padding: px-rem(5) px-rem(10);
+}
+.is-active {
+  color: $menu-icons-color;
+  &:hover {
+    color: rgba($menu-icons-color, 0.6);
+  }
+}
+.header__icon {
+  @include increase-element-size(px-rem(18), $header-icon-sizes, width);
+  @include increase-element-size(px-rem(18), $header-icon-sizes, height);
+  &:focus {
+    border: none;
+    outline: none;
+  }
+}
+.header__logout-btn {
+  @include strip-btn-defaults;
+  color: $btn-txt-color;
+  cursor: pointer;
+  transition: color 0.2s ease-in;
+  &:hover {
+    color: rgba($menu-icons-color, 0.6);
+  }
+}
+.new-message__btn-holder {
+  background-color: rgba($primary-fg-color, 0.8);
+  @include h-flex(center, center);
+}
+.main__sidebar--close,
+.main__sidebar--open {
+  @include increase-element-size(px-rem(18), $header-icon-sizes, width);
+  @include increase-element-size(px-rem(18), $header-icon-sizes, height);
+}
+/* ============================================
+================= MEDIA QUERIES =================
+============================================ */

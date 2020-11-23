@@ -1,0 +1,18 @@
+/* ============================================
+================= MAIN =================
+============================================ */
+.main {
+  @include increase-element-size(95%, $container-width-sizes, width);
+  margin: 0 auto;
+  @include v-flex(flex-start, flex-start);
+}
+.main__chat-app {
+  height: 100%;
+  @include v-flex(flex-start, center);
+  text-align: center;
+}
+.main__chat-app h2 {
+  margin: px-rem(120) px-rem(25);
+  text-align: center;
+  line-height: px-rem(40);
+}
